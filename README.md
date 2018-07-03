@@ -1,1 +1,1 @@
-# condor-image
+# oas-php-image
