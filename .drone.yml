@@ -4,5 +4,5 @@ pipeline:
     image: plugins/docker
     repo: oas0/oas-php-image
     secrets:
-      - DOCKER_USERNAME
-      - DOCKER_PASSWORD
+      - docker_username
+      - docker_password
