@@ -1,9 +1,7 @@
 pipeline:
   docker:
     image: plugins/docker
+    username: ${docker_username}
+    password: ${docker_password}
     repo: oas0/oas-php-image
-    default_tags: true
-    secrets: [ docker_username , docker_password ]
-    when:
-      branch: [ "5.6" ]
     tags: latest
