@@ -1,6 +1,6 @@
 pipeline:
   docker:
-    auto_tags: true
+    tags: 5.6
     image: plugins/docker
     repo: oas0/oas-php-image
     secrets:
