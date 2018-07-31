@@ -3,7 +3,6 @@ pipeline:
     auto_tags: true
     image: plugins/docker
     password: $docker_password
-    pull: true
     repo: oas0/oas-php-image
     tags: "5.6"
     username: $docker_username
