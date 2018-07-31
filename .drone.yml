@@ -1,5 +1,7 @@
 pipeline:
   docker:
+    debug: true
+    pull: true
     auto_tags: true
     image: plugins/docker
     password: $DOCKER_PASSWORD
