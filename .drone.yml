@@ -3,9 +3,6 @@ pipeline:
     image: plugins/docker
     repo: oas0/oas-php-image
     auto_tag: true
-    secrets:
-      - docker_username
-      - docker_password
+    secrets: [ docker_username , docker_password ]
     when:
-      branch:
-         - 5.6
+      branch: [ "5.6" ]
