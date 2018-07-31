@@ -1,0 +1,5 @@
+pipeline:
+  docker:
+    image: plugins/docker
+    repo: oas0/oas-php-image
+    auto_tag: true

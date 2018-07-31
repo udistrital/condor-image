@@ -1,3 +1,4 @@
+# genera una imagen para S2I a partir de una imágen S2I existente
 FROM centos/php-56-centos7:5.6
 USER root
 
@@ -29,7 +30,8 @@ COPY oas_php_02.ini /etc/opt/rh/rh-php56/php.d/oas_php_02.ini
 
 RUN php -i | grep -o "OCI8 Support => enabled"
 
-RUN groupadd -r -g 51111 oas # numero de usuario y numero de grupo debe ser consistente por que comparten datos con EFS
+RUN groupadd -r -g 51111 oas # numero de usuario y numero de grupo debe ser consistente por que compartan datos con EFS
 RUN useradd -r -g oas -G apache,root -u 51111 oas
 
+# default se necesita para cumplir con el estándar S2I
 USER default
