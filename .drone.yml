@@ -3,3 +3,6 @@ pipeline:
     image: plugins/docker
     repo: oas0/oas-php-image
     auto_tag: true
+    when:
+      branch:
+         - 5.6
