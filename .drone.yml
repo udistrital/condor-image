@@ -3,7 +3,7 @@ pipeline:
     debug: true
     pull: true
     auto_tags: true
-    image: plugins/docker
+    image: plugins/docker:17.05
     password: $DOCKER_PASSWORD
     repo: oas0/oas-php-image
     tags: "5.6"
