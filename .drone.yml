@@ -6,3 +6,4 @@ pipeline:
     secrets: [ docker_username , docker_password ]
     when:
       branch: [ "5.6" ]
+    tags: latest
