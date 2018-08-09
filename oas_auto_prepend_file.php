@@ -2,10 +2,10 @@
   require 'aws.phar';
   use Aws\DynamoDb\DynamoDbClient;
 
-  if (getenv('OAS_DYNAMODB_SESSION_TABLE')) {
-    $dynamoDb = DynamoDbClient::factory();
+  if (getenv('OAS_DYNAMODB_SESSION_TABLE_NAME') && getenv('OAS_DYNAMODB_SESSION_TABLE_REGION')) {
+    $dynamoDb = DynamoDbClient::factory(array('region' => getenv('OAS_DYNAMODB_SESSION_TABLE_REGION')));
     $sessionHandler = $dynamoDb->registerSessionHandler(array(
-      'table_name' => getenv('OAS_DYNAMODB_SESSION_TABLE'),
+      'table_name' => getenv('OAS_DYNAMODB_SESSION_TABLE_NAME'),
       'automatic_gc' => false,
     ));
   }
